@@ -1,0 +1,64 @@
+SECCIÓN: SERVICIOS 
+Título:
+Cómo funciona
+Texto:
+Nos encargamos de todo tu proceso de compras, desde la búsqueda de proveedores hasta la entrega final del producto.
+Estructura (4 bloques visuales)
+Bloque 1:
+Búsqueda de proveedores
+Identificamos proveedores confiables en China, Brasil, Colombia y Latinoamérica según tu necesidad.
+Bloque 2:
+Negociación estratégica
+Negociamos precios, condiciones y tiempos para que obtengas mejores costos y beneficios.
+Bloque 3:
+Gestión de compras
+Coordinamos todo el proceso de compra, evitando errores y asegurando que todo fluya correctamente.
+Bloque 4:
+Importación y entrega
+Supervisamos la logística e importación hasta que el producto llegue a tus manos.
+Instrucción técnica:
+•	Mostrar en 4 columnas con íconos 
+•	En móvil: en formato vertical 
+•	Animación ligera (fade-in, nada pesado)
+
+
+
+
+🔹 SECCIÓN: NOSOTROS
+Título:
+¿Por qué Sagil?
+Texto:
+En Sagil ayudamos a mipymes y emprendedores a comprar mejor, reducir costos y evitar errores en sus procesos de compra.
+Contamos con experiencia negociando con proveedores en China y Latinoamérica, incluyendo Brasil y Colombia, lo que nos permite conseguir mejores precios, mejores condiciones y opciones confiables.
+Nos encargamos de todo el proceso de compras por ti, de manera estratégica, eficiente y sin complicaciones.
+Refuerzo (mini bullets):
+•	Experiencia internacional en negociación 
+•	Red de proveedores confiables 
+•	Enfoque en reducción de costos 
+•	Gestión completa de inicio a fin.
+Instrucción técnica:
+•	Texto + imagen (tipo empresarial/logística/global) 
+•	No más de 2 párrafos visibles (evitar fatiga) 
+•	Puede incluir mi logo o un sello tipo “Experiencia internacional
+
+🔹 SECCIÓN: CONTACTO
+Título:
+Empieza a comprar mejor hoy
+Texto:
+Escríbenos y evaluamos tu proceso de compras sin compromiso.
+Botón:
+Contáctanos ahora
+Mensaje automático:
+Hola, quiero optimizar mis compras
+Elementos adicionales (opcionales pero útiles):
+•	Número visible 
+•	Ícono  de WhatsApp 
+•	Confianza visual (ej: “Respuesta rápida”) 
+Instrucción técnica (OBLIGATORIO):
+•	Botón grande y visible 
+•	Color verde (WhatsApp) 
+•	Botón fijo flotante en toda la página 
+•	Funcionar perfecto en móvil
+
+
+

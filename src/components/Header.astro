@@ -1,5 +1,9 @@
+---
+import sagilLogo from "../assets/SAGIL.png";
+---
+
 <header
-  class="w-full bg-[#0b1727] py-4 shadow-md border-b border-white/5 fixed top-0 left-0 z-50"
+  class="w-full bg-[#ffffff] py-2 md:py-4 shadow-sm border-b border-gray-100 sticky top-0 z-50"
 >
   <div
     class="max-w-[1440px] mx-auto px-6 md:px-8 flex justify-between items-center"
@@ -7,57 +11,36 @@
     <!-- Header Logo -->
     <a
       href="/"
-      class="flex items-center gap-3 transition-transform duration-300 hover:scale-[1.02]"
+      class="flex items-center transition-transform duration-300 hover:scale-[1.02]"
     >
-      <svg
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-9 h-9 md:w-10 md:h-10 shrink-0"
-      >
-        <rect width="40" height="40" rx="8" fill="#1A5FA8"></rect>
-        <path
-          d="M10 20L16 14L22 20L28 14"
-          stroke="white"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-        <path
-          d="M10 26L16 20L22 26L28 20"
-          stroke="#F5A623"
-          stroke-width="2.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-      <span
-        class="text-white text-[26px] md:text-[30px] font-black tracking-tighter mt-0.5"
-      >
-        SAGIL<span class="text-[#F5A623]">.</span>
-      </span>
+      <img
+        class="w-30 md:w-20 lg:w-32 max-h-16 md:max-h-20 object-contain"
+        src={sagilLogo.src}
+        alt="Logo Sagil Solutions"
+      />
     </a>
-
     <!-- Menú de Navegación -->
     <nav class="hidden md:block">
       <ul class="flex items-center gap-8">
         <li>
           <a
             href="#"
-            class="text-sm font-medium text-slate-300 hover:text-white transition-colors tracking-wide relative group"
+            class="text-sm font-medium text-[#003061] hover:text-[#001B3C] transition-colors tracking-wide relative group"
           >
             Servicios
             <span
-              class="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-sm font-medium text-slate-300 hover:text-white transition-colors tracking-wide relative group"
+            class="text-sm font-medium text-[#003061] hover:text-[#001B3C] transition-colors tracking-wide relative group"
           >
             Nosotros
             <span
-              class="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-amber-500 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1.5 left-0 w-0 h-[2px] bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
         </li>
@@ -74,7 +57,7 @@
 
     <!-- Menú Mobile -->
     <button
-      class="md:hidden text-slate-300 hover:text-white p-2"
+      class="md:hidden text-[#003061] hover:text-[#001B3C] p-2"
       aria-label="Abrir menú"
     >
       <svg
@@ -93,5 +76,3 @@
     </button>
   </div>
 </header>
-<div class="h-[72px] md:h-[80px]"></div>
-<!-- Espaciador porque el header ahora es fixed -->
