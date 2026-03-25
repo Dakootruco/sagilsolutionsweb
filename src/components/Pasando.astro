@@ -1,16 +1,162 @@
-<section class="bg-white">
-    <div>
-        <h2>¿Te esta pasando esto?</h2>
-        <ol>
-            <li>Estas comprando productos de calidad media o baja?</li>
-            <li>No tienes proveedores confiables?</li>
-            <li>No tienes tiempo para gestionar tus compras?</li>
-            <li>No tienes experiencia en compras internacionales?</li>
-            <li>No tienes tiempo para gestionar tus compras?</li>
-        </ol>
+---
+import altamar from "../assets/barcoenaltamar.png";
+---
+
+<section
+  class="bg-gray-50 py-10 md:py-12 px-6 md:px-8 lg:px-12 overflow-hidden"
+>
+  <div
+    class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch"
+  >
+    <!-- Contenido Izquierda: Textos y Puntos -->
+    <div class="flex flex-col justify-center order-2 lg:order-1">
+      <h2
+        class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[#003061] tracking-tight mb-8 leading-tight"
+      >
+        ¿Te está pasando esto?
+      </h2>
+
+      <ul class="space-y-3">
+        <!-- Item 1 -->
+        <li
+          class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-amber-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path></svg
+            >
+          </div>
+          <p class="text-base md:text-lg text-gray-700 font-medium">
+            ¿Estás comprando caro sin darte cuenta?
+          </p>
+        </li>
+
+        <!-- Item 2 -->
+        <li
+          class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-amber-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path></svg
+            >
+          </div>
+          <p class="text-base md:text-lg text-gray-700 font-medium">
+            ¿No tienes tiempo para negociar?
+          </p>
+        </li>
+
+        <!-- Item 3 -->
+        <li
+          class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-amber-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path></svg
+            >
+          </div>
+          <p class="text-base md:text-lg text-gray-700 font-medium">
+            ¿Dependes de un solo suplidor?
+          </p>
+        </li>
+
+        <!-- Item 4 -->
+        <li
+          class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-amber-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path></svg
+            >
+          </div>
+          <p class="text-base md:text-lg text-gray-700 font-medium">
+            ¿No sabes importar o te da miedo el proceso?
+          </p>
+        </li>
+
+        <!-- Item 5 -->
+        <li
+          class="flex items-center gap-4 p-4 rounded-xl bg-white shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 transition-all duration-300 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] hover:-translate-y-1"
+        >
+          <div
+            class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center"
+          >
+            <svg
+              class="w-6 h-6 text-amber-500"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              ><path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+              ></path></svg
+            >
+          </div>
+          <p class="text-base md:text-lg text-gray-700 font-medium">
+            ¿Tu equipo compra sin estrategia?
+          </p>
+        </li>
+      </ul>
     </div>
 
-    <div>
-        <img src="" alt="" />
+    <!-- Imagen Derecha -->
+    <div
+      class="relative w-full h-[350px] lg:h-auto lg:min-h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl group order-1 lg:order-2"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-tr from-[#003061]/20 to-transparent z-10 transition-opacity duration-500 group-hover:opacity-0"
+      >
+      </div>
+      <img
+        src={altamar.src}
+        alt="Foto Barco en el mar con contenedores"
+        class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+      />
     </div>
+  </div>
 </section>
