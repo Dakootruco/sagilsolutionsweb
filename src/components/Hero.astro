@@ -1,5 +1,5 @@
 ---
-// Hero.astro
+import hero from "../assets/avioncont.png";
 ---
 
 <section
@@ -8,7 +8,7 @@
     {/* Imagen de Fondo */}
     <div class="absolute inset-0 z-0">
         <img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop"
+            src={hero.src}
             alt="Hero Sagil Solutions"
             class="w-full h-full object-cover object-center"
         />
@@ -51,9 +51,8 @@
         <p
             class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-light leading-relaxed drop-shadow-md"
         >
-            Creamos soluciones ágiles y personalizadas que impulsan el
-            crecimiento, optimizan procesos y transforman ideas en realidades
-            digitales.
+            Reducimos tus costos, negociamos con proveedores y gestionamos todo
+            tu proceso de compras de inicio a fin.
         </p>
 
         {/* Botones de acción (Call to action) */}
@@ -82,14 +81,30 @@
 
             <a
                 href="#contacto"
-                class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white transition-all duration-300 bg-white/5 border border-white/20 rounded-full backdrop-blur-sm hover:bg-white/10 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-gray-900 w-full sm:w-auto"
+                class="inline-flex items-center justify-center px-12 py-4 transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.23)] rounded-full hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-900 w-full sm:w-auto"
             >
-                Contáctanos
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="#ffffff"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"
+                    ></path><path
+                        d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+                    ></path></svg
+                >
             </a>
         </div>
     </div>
 
-    {/* Scroll indicatór animado en la parte inferior */}
+    <!-- {/* Scroll indicatór animado en la parte inferior */}
     <div
         class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 mt-8 flex flex-col items-center animate-bounce"
     >
@@ -108,21 +123,22 @@
                 d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
         </svg>
     </div>
-</section>
+</section> -->
 
-<style>
-    /* Animación personalizada para que el badge baje suavemente */
-    @keyframes fadeInDown {
-        0% {
-            opacity: 0;
-            transform: translateY(-20px);
+    <style>
+        /* Animación personalizada para que el badge baje suavemente */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+        .animate-fade-in-down {
+            animation: fadeInDown 0.8s ease-out forwards;
         }
-    }
-    .animate-fade-in-down {
-        animation: fadeInDown 0.8s ease-out forwards;
-    }
-</style>
+    </style>
+</section>
