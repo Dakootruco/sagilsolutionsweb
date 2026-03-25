@@ -1,0 +1,208 @@
+---
+// Contacto.astro
+---
+
+<section id="contacto" class="py-20 bg-white overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12">
+        <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center"
+        >
+            {/* Izquierda: Textos y Botón WhatsApp */}
+            <div class="flex flex-col justify-center animate-fade-in-up">
+                <h2
+                    class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3"
+                >
+                    Contacto
+                </h2>
+                <h3
+                    class="text-4xl md:text-5xl font-extrabold text-[#003061] tracking-tight mb-6 leading-tight"
+                >
+                    Empieza a comprar mejor hoy
+                </h3>
+                <p
+                    class="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 font-light"
+                >
+                    Escríbenos y evaluamos tu proceso de compras sin ningún
+                    compromiso. Estamos listos para ayudarte a optimizar tus
+                    costos.
+                </p>
+
+                <div>
+                    <a
+                        href="https://wa.me/XXXXXXXXXX?text=Hola,%20quiero%20optimizar%20mis%20compras"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center justify-center gap-3 px-10 py-5 transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.3)] rounded-2xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 w-full sm:w-auto"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="28"
+                            height="28"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="#ffffff"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp"
+                        >
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                            ></path>
+                            <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"
+                            ></path>
+                            <path
+                                d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+                            ></path>
+                        </svg>
+                        <span class="text-white font-bold text-lg tracking-wide"
+                            >Contáctanos ahora</span
+                        >
+                    </a>
+                </div>
+
+                <div class="mt-8 flex items-center gap-4 text-gray-500 text-sm">
+                    <svg
+                        class="w-5 h-5 text-emerald-500"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                        ></path>
+                    </svg>
+                    <span>Respuesta rápida garantizada</span>
+                </div>
+            </div>
+
+            {/* Derecha: Formulario de Contacto */}
+            <div
+                class="bg-white p-8 md:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] border border-gray-100 animate-fade-in-up delay-200"
+            >
+                <div class="mb-8 text-center">
+                    <h4 class="text-2xl md:text-3xl font-bold text-[#003061]">
+                        Solicita tu diagnóstico gratuito
+                    </h4>
+                </div>
+                <form action="#" method="POST" class="flex flex-col gap-6">
+                    <div>
+                        <label
+                            for="nombre"
+                            class="block text-sm font-semibold text-gray-700 mb-2"
+                            >Nombre completo</label
+                        >
+                        <input
+                            type="text"
+                            id="nombre"
+                            name="nombre"
+                            placeholder="Ej. Juan Pérez"
+                            class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 placeholder-gray-400 text-gray-800"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="empresa"
+                            class="block text-sm font-semibold text-gray-700 mb-2"
+                            >Empresa</label
+                        >
+                        <input
+                            type="text"
+                            id="empresa"
+                            name="empresa"
+                            placeholder="Ej. Mi Negocio S.A."
+                            class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 placeholder-gray-400 text-gray-800"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="correo"
+                            class="block text-sm font-semibold text-gray-700 mb-2"
+                            >Correo electrónico</label
+                        >
+                        <input
+                            type="email"
+                            id="correo"
+                            name="correo"
+                            placeholder="ejemplo@correo.com"
+                            class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 placeholder-gray-400 text-gray-800"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="telefono"
+                            class="block text-sm font-semibold text-gray-700 mb-2"
+                            >Teléfono / WhatsApp</label
+                        >
+                        <input
+                            type="tel"
+                            id="telefono"
+                            name="telefono"
+                            placeholder="+1 809 000 1122"
+                            class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 placeholder-gray-400 text-gray-800"
+                        />
+                    </div>
+
+                    <div>
+                        <label
+                            for="mensaje"
+                            class="block text-sm font-semibold text-gray-700 mb-2"
+                            >¿Que necesitas?</label
+                        >
+                        <textarea
+                            id="mensaje"
+                            name="mensaje"
+                            rows="4"
+                            placeholder="Cuéntanos brevemente sobre tus necesidades..."
+                            class="w-full px-5 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all duration-300 placeholder-gray-400 text-gray-800 resize-none"
+                            required></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full mt-2 bg-[#003061] hover:bg-[#002244] text-white font-bold text-lg py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#003061] focus:ring-offset-2 flex justify-center items-center gap-2"
+                    >
+                        Quiero mi diagnóstico
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .animate-fade-in-up {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .delay-200 {
+        animation-delay: 200ms;
+    }
+</style>

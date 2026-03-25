@@ -1,5 +1,136 @@
-<section class="max-w-auto max-h-auto">
-  <footer class="bg-black py-20 px-6 md:px-8 lg:px-12 text-white">
-    esto es el footer
-  </footer>
-</section>
+---
+// Footer.astro
+import logo from "../assets/SAGIL.png";
+---
+
+<footer
+  class="bg-[#001B3C] pt-16 pb-8 px-6 md:px-8 lg:px-12 text-gray-300 mt-20"
+>
+  <div class="max-w-[1440px] mx-auto">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 border-b border-gray-700/50 pb-12"
+    >
+      {/* Columna 1: Logo y Resumen */}
+      <div class="flex flex-col items-start lg:col-span-2">
+        {
+          /* Usamos un fondo blanco suave para el logo porque es oscuro por defecto */
+        }
+        <div
+          class="bg-[#f6faff] backdrop-blur-sm p-3 rounded-xl mb-6 inline-block shadow-lg"
+        >
+          <img
+            src={logo.src}
+            alt="Sagil Solutions Logo"
+            class="h-10 md:h-12 w-auto object-contain"
+          />
+        </div>
+        <p class="text-sm md:text-base leading-relaxed max-w-md text-gray-400">
+          En Sagil Solutions transformamos ideas en realidades comerciales.
+          Gestión estratégica de compras e importaciones diseñada para hacer
+          crecer tu negocio.
+        </p>
+      </div>
+
+      {/* Columna 2: Datos de Contacto */}
+      <div class="flex flex-col">
+        <h4
+          class="text-white font-bold mb-6 tracking-wider uppercase text-sm flex items-center gap-2"
+        >
+          Contáctanos
+        </h4>
+        <ul class="space-y-4 text-sm md:text-base">
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                class="w-4 h-4 text-[#25D366]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+            </div>
+            <a
+              href="mailto:contacto@sagilsolutions.com"
+              class="hover:text-white hover:underline transition-all"
+              >contacto@sagilsolutions.com</a
+            >
+          </li>
+
+          <li class="flex items-center gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                class="w-4 h-4 text-[#25D366]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                ></path>
+              </svg>
+            </div>
+            <a
+              href="tel:+18297074555"
+              class="hover:text-white hover:underline transition-all"
+              >+1 (829) 707-4555</a
+            >
+          </li>
+
+          <li class="flex items-start gap-3">
+            <div
+              class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0"
+            >
+              <svg
+                class="w-4 h-4 text-[#25D366]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+              </svg>
+            </div>
+            <span class="mt-1">Santo Domingo,<br />República Dominicana</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    {/* Bottom Footer: Derechos y Desarrollo */}
+    <div
+      class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs md:text-sm text-gray-500"
+    >
+      <p>
+        &copy; {new Date().getFullYear()} Sagil Solutions. Todos los derechos reservados.
+      </p>
+      <p class="flex items-center gap-1">
+        Desarrollado por <span
+          class="text-gray-300 font-semibold tracking-wide ml-1"
+          >Dacarlos Lora</span
+        >
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,124 @@
+---
+// Servicios.astro
+---
+
+<section id="servicios" class="py-20 bg-gray-50 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 md:px-8 lg:px-12">
+        {/* Encabezado de la sección */}
+        <div class="text-center max-w-3xl mx-auto mb-16 px-4 fade-in-section">
+            <h2 class="text-sm font-bold text-blue-600 tracking-widest uppercase mb-3">Nuestros Servicios</h2>
+            <h3 class="text-4xl md:text-5xl font-extrabold text-[#003061] tracking-tight mb-6">
+                ¿Cómo funciona?
+            </h3>
+            <p class="text-lg text-gray-600 leading-relaxed">
+                Nos encargamos de todo tu proceso de compras, desde la búsqueda de
+                proveedores hasta la entrega final del producto.
+            </p>
+        </div>
+
+        {/* Grid de Cards (1 nav en móvil, 2 en tablets, 4 en lg) */}
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* Card 1 */}
+            <div class="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-100">
+                <div class="w-14 h-14 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                </div>
+                <h4 class="text-xl font-bold text-[#003061] mb-3">Búsqueda de proveedores</h4>
+                <p class="text-gray-600 leading-relaxed">
+                    Identificamos proveedores confiables en China y Latinoamérica según
+                    tu necesidad.
+                </p>
+            </div>
+
+            {/* Card 2 */}
+            <div class="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-200">
+                <div class="w-14 h-14 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-emerald-500 group-hover:text-white transition-all duration-300">
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                    </svg>
+                </div>
+                <h4 class="text-xl font-bold text-[#003061] mb-3">Negociación estratégica</h4>
+                <p class="text-gray-600 leading-relaxed">
+                    Negociamos precios, condiciones y tiempos para que obtengas mejores
+                    costos y beneficios.
+                </p>
+            </div>
+
+            {/* Card 3 */}
+            <div class="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-300">
+                <div class="w-14 h-14 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-amber-500 group-hover:text-white transition-all duration-300">
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                    </svg>
+                </div>
+                <h4 class="text-xl font-bold text-[#003061] mb-3">Gestión de compras</h4>
+                <p class="text-gray-600 leading-relaxed">
+                    Coordinamos todo el proceso de compra, evitando errores y asegurando
+                    que todo fluya correctamente.
+                </p>
+            </div>
+
+            {/* Card 4 */}
+            <div class="bg-white rounded-2xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 hover:shadow-[0_8px_30px_-4px_rgba(0,0,0,0.1)] transition-all duration-300 hover:-translate-y-2 group fade-in-section delay-400">
+                <div class="w-14 h-14 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-purple-600 group-hover:text-white transition-all duration-300">
+                    <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+                    </svg>
+                </div>
+                <h4 class="text-xl font-bold text-[#003061] mb-3">Importación y entrega</h4>
+                <p class="text-gray-600 leading-relaxed">
+                    Supervisamos la logística e importación hasta que el producto llegue
+                    a tus manos.
+                </p>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Animación global CSS */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Retrasos escalonados para que aparezcan en cascada */
+    .delay-100 { transition-delay: 100ms; }
+    .delay-200 { transition-delay: 200ms; }
+    .delay-300 { transition-delay: 300ms; }
+    .delay-400 { transition-delay: 400ms; }
+</style>
+
+<script>
+    // Inicializar Intersection Observer una vez que cargue el script Astro
+    const initObserver = () => {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: '0px 0px -50px 0px', threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in-section').forEach(el => observer.observe(el));
+    };
+
+    // Astro usa ViewTransitions, por lo que es buena práctica engancharse a 'astro:page-load' o ejecutar directo.
+    document.addEventListener('astro:page-load', initObserver);
+    // Y ejecutar al DOMContentLoaded la primera vez también
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initObserver);
+    } else {
+        initObserver();
+    }
+</script>

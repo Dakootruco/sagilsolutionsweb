@@ -24,7 +24,7 @@ import sagilLogo from "../assets/SAGIL.png";
       <ul class="flex items-center gap-8">
         <li>
           <a
-            href="#"
+            href="#servicios"
             class="text-sm font-medium text-[#003061] hover:text-[#001B3C] transition-colors tracking-wide relative group"
           >
             Servicios
@@ -35,7 +35,7 @@ import sagilLogo from "../assets/SAGIL.png";
         </li>
         <li>
           <a
-            href="#"
+            href="#nosotros"
             class="text-sm font-medium text-[#003061] hover:text-[#001B3C] transition-colors tracking-wide relative group"
           >
             Nosotros
@@ -46,7 +46,7 @@ import sagilLogo from "../assets/SAGIL.png";
         </li>
         <li>
           <a
-            href="#"
+            href="#contacto"
             class="bg-[#22c55e] hover:bg-[#16a34a] text-white text-sm font-bold px-6 py-2.5 rounded-lg transition-all duration-300 shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] hover:shadow-[0_6px_20px_rgba(34,197,94,0.23)] hover:-translate-y-0.5"
           >
             Contacto
@@ -56,7 +56,9 @@ import sagilLogo from "../assets/SAGIL.png";
     </nav>
 
     <!-- Menú Mobile -->
+
     <button
+      onclick="toggleMenu()"
       class="md:hidden text-[#003061] hover:text-[#001B3C] p-2"
       aria-label="Abrir menú"
     >
@@ -75,4 +77,23 @@ import sagilLogo from "../assets/SAGIL.png";
       </svg>
     </button>
   </div>
+
+  <!-- Menú Mobile Dropdown (Desplegable) -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl shadow-black/5 border-t border-gray-100 flex-col items-center py-8 gap-6 z-40 origin-top">
+    <a href="#servicios" onclick="toggleMenu()" class="text-lg font-medium text-[#003061] hover:text-[#001B3C] w-full text-center py-2 transition-colors">Servicios</a>
+    <a href="#nosotros" onclick="toggleMenu()" class="text-lg font-medium text-[#003061] hover:text-[#001B3C] w-full text-center py-2 transition-colors">Nosotros</a>
+    <a href="#contacto" onclick="toggleMenu()" class="bg-[#22c55e] hover:bg-[#16a34a] text-white text-lg font-bold px-10 py-3 rounded-xl transition-all shadow-[0_4px_14px_0_rgba(34,197,94,0.39)] mt-2">Contacto</a>
+  </div>
 </header>
+
+<script is:inline>
+  // Definir la función globalmente para el onclick
+  window.toggleMenu = function() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      // Alternamos entre oculto (hidden) y visible (flex)
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+    }
+  }
+</script>
