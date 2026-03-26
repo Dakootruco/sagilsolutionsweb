@@ -1,7 +1,7 @@
 ---
 // Nosotros.astro
 import logo from "../assets/SAGIL.png";
-import logo2 from "../assets/SAGIL-Gestion.png";
+import contbarco from "../assets/contbarco.webp";
 ---
 
 <section id="nosotros" class="py-20 bg-gray-50 overflow-hidden">
@@ -18,7 +18,7 @@ import logo2 from "../assets/SAGIL-Gestion.png";
                     /* Usamos una imagen de Unsplash de logística de contenedores/transporte internacional */
                 }
                 <img
-                    src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80"
+                    src={contbarco.src}
                     alt="Operaciones de logística internacional Sagil"
                     class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
@@ -190,7 +190,9 @@ import logo2 from "../assets/SAGIL-Gestion.png";
                 </div>
 
                 {/* Sello / Detalle Marca */}
-                <div class="flex flex-col items-center justify-center w-full gap-2 pt-8 border-t border-gray-200/60 mt-4">
+                <div
+                    class="flex flex-col items-center justify-center w-full gap-2 pt-8 border-t border-gray-200/60 mt-4"
+                >
                     <img
                         src={logo.src}
                         alt="Sagil Logo"
