@@ -5,10 +5,17 @@ import type { APIRoute } from "astro";
 import { Resend } from "resend";
 
 
-const resend = new Resend(import.meta.env.RESEND_API_KEY);
-
 export const POST: APIRoute = async ({ request }) => {
     try {
+        // En Netlify, a veces import.meta.env no está disponible en runtime de la misma forma, process.env es más seguro
+        const apiKey = import.meta.env.RESEND_API_KEY || (typeof process !== 'undefined' ? process.env.RESEND_API_KEY : undefined);
+        
+        if (!apiKey) {
+            throw new Error("No se encontró la API Key de Resend (RESEND_API_KEY). Asegúrate de agregarla en Netlify.");
+        }
+
+        const resend = new Resend(apiKey);
+        
         const formData = await request.formData();
         const nombre = formData.get("nombre");
         const empresa = formData.get("empresa") || "No especificada";
