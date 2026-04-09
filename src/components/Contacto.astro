@@ -29,7 +29,7 @@
 
                 <div>
                     <a
-                        href="https://wa.me/XXXXXXXXXX?text=Hola,%20quiero%20optimizar%20mis%20compras"
+                        href="https://wa.me/18297074555?text=Hola,%20quiero%20optimizar%20mis%20compras"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="inline-flex items-center justify-center gap-3 px-10 py-5 transition-all duration-300 bg-[#25D366] hover:bg-[#128C7E] shadow-[0_4px_14px_0_rgba(37,211,102,0.39)] hover:shadow-[0_6px_20px_rgba(37,211,102,0.3)] rounded-2xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 w-full sm:w-auto"
@@ -87,7 +87,7 @@
                         Solicita tu diagnóstico gratuito
                     </h4>
                 </div>
-                <form action="#" method="POST" class="flex flex-col gap-6">
+                <form id="contact-form" action="/api/senEmail" method="POST" enctype="multipart/form-data" class="flex flex-col gap-6">
                     <div>
                         <label
                             for="nombre"
@@ -166,6 +166,7 @@
                     </div>
 
                     <button
+                        onclick=""
                         type="submit"
                         class="w-full mt-2 bg-[#003061] hover:bg-[#002244] text-white font-bold text-lg py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-[#003061] focus:ring-offset-2 flex justify-center items-center gap-2"
                     >
@@ -184,6 +185,7 @@
                                 d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
                     </button>
+                    <div id="form-message" class="hidden mt-2 p-4 rounded-xl text-center font-semibold transition-all"></div>
                 </form>
             </div>
         </div>
@@ -206,3 +208,54 @@
         animation-delay: 200ms;
     }
 </style>
+
+<script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const messageDiv = document.getElementById('form-message');
+    const submitBtn = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const originalBtnText = submitBtn?.innerHTML;
+
+    form?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Enviando...';
+            submitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+        }
+
+        try {
+            const formData = new FormData(form);
+            const response = await fetch('/api/senEmail', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+
+            if (messageDiv) {
+                messageDiv.classList.remove('hidden');
+                if (response.ok) {
+                    messageDiv.className = 'mt-2 p-4 rounded-xl text-center font-semibold transition-all bg-green-100 text-green-700';
+                    messageDiv.textContent = '¡Mensaje enviado con éxito! Nos pondremos en contacto contigo.';
+                    form.reset();
+                } else {
+                    messageDiv.className = 'mt-2 p-4 rounded-xl text-center font-semibold transition-all bg-red-100 text-red-700';
+                    messageDiv.textContent = result.error || 'Hubo un problema al enviar tu mensaje.';
+                }
+            }
+        } catch (error) {
+            if (messageDiv) {
+                messageDiv.classList.remove('hidden');
+                messageDiv.className = 'mt-2 p-4 rounded-xl text-center font-semibold transition-all bg-red-100 text-red-700';
+                messageDiv.textContent = 'Error de conexión. Inténtalo de nuevo.';
+            }
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+            }
+        }
+    });
+</script>
