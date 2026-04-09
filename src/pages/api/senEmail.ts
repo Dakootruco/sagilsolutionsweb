@@ -16,12 +16,13 @@ export const POST: APIRoute = async ({ request }) => {
 
         const resend = new Resend(apiKey);
         
-        const formData = await request.formData();
-        const nombre = formData.get("nombre");
-        const empresa = formData.get("empresa") || "No especificada";
-        const correo = formData.get("correo");
-        const telefono = formData.get("telefono") || "No especificado";
-        const mensaje = formData.get("mensaje");
+        // Cambiar a JSON para máxima compatibilidad con el entorno Netlify (evita errores nativos de parseo de FormData)
+        const body = await request.json();
+        const nombre = body.nombre;
+        const empresa = body.empresa || "No especificada";
+        const correo = body.correo;
+        const telefono = body.telefono || "No especificado";
+        const mensaje = body.mensaje;
 
         const { data, error } = await resend.emails.send({
             from: "onboarding@resend.dev", // NUNCA PONGAS UN @GMAIL.COM AQUÍ. Siempre onboarding@resend.dev para pruebas.

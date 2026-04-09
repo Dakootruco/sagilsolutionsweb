@@ -226,9 +226,14 @@
 
         try {
             const formData = new FormData(form);
+            const dataObj = Object.fromEntries(formData.entries());
+
             const response = await fetch('/api/senEmail', {
                 method: 'POST',
-                body: formData
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dataObj)
             });
 
             const result = await response.json();
@@ -241,7 +246,8 @@
                     form.reset();
                 } else {
                     messageDiv.className = 'mt-2 p-4 rounded-xl text-center font-semibold transition-all bg-red-100 text-red-700';
-                    messageDiv.textContent = result.error || 'Hubo un problema al enviar tu mensaje.';
+                    messageDiv.textContent = (result.error || 'Hubo un problema.') + (result.detalle ? " Detalle: " + result.detalle : "");
+                    console.error("Detalle del error del servidor:", result);
                 }
             }
         } catch (error) {
