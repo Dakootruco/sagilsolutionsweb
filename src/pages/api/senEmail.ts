@@ -25,8 +25,8 @@ export const POST: APIRoute = async ({ request }) => {
         const mensaje = body.mensaje;
 
         const { data, error } = await resend.emails.send({
-            from: "onboarding@resend.dev", // NUNCA PONGAS UN @GMAIL.COM AQUÍ. Siempre onboarding@resend.dev para pruebas.
-            to: "daco010203@gmail.com", // AQUÍ va tu correo registrado en Resend
+            from: "Formulario Web <no-reply@sagilsolutions.com>", 
+            to: "contacto@sagilsolutions.com",
             subject: `Nuevo contacto de: ${nombre}`,
             html: `
                 <h2>Nuevo mensaje desde la Web</h2>
